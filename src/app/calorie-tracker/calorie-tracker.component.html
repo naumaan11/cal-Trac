@@ -1,0 +1,45 @@
+
+
+  <div>
+    
+    <h2 id="toggleHead"(click)="breakFastoggle()"  >Breakfast  &nbsp; &nbsp;   <span id="plusIcon" style="margin-left:50px">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        <i class="fa fa-plus"  (click)="getFood()"></i>
+      </button>
+    </span> </h2> 
+    <ul *ngIf="showToggle">
+      <li *ngFor="let food of breakfast">
+          {{food.foodName}}
+      </li>
+    </ul>
+  </div>
+
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div *ngIf="foods.length > 0">
+                <ul style="cursor:pointer">
+                    <li #foodName *ngFor="let food of foods" data-dismiss="modal"  (click)="addBreakfast(food.foodName)">
+                      {{food.foodName}}
+                    </li>
+                </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>

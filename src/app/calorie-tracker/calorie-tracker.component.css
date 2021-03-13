@@ -1,0 +1,10 @@
+#toggleHead{
+    cursor:pointer;border:1px solid black;
+    width: 300px;
+    
+}
+
+#plusIcon {
+    color: red;
+    text-align: right
+}

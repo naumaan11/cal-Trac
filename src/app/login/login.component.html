@@ -1,0 +1,12 @@
+<div>
+  <label >User Name:</label>
+  <input [(ngModel)]="details.name" type="text" placeholder="Enter User Name">
+  <br><br>
+
+  <label>Password:</label>
+  <input [(ngModel)]="details.password" type="text" placeholder="Enter Password">
+</div>
+<div>
+  <button (click)="postDetails()" routerLink="/dashboard">submit</button>
+</div>
+
